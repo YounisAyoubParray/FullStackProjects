@@ -1,0 +1,16 @@
+<%- include("partials/header.ejs") %>
+
+
+<form action="/upsubmit" method="post">
+    <h3> <%- num %> </h3>
+<textarea 
+  name="blogdescriptionu"
+  rows="10"
+  cols="50"
+  style="width:100%; height:300px; resize:vertical; padding:8px; vertical-align:top; line-height:1.4;"
+  required><%- data %>
+</textarea>
+
+
+  <button class="btn btn-primary" type="upsubmit" style="margin: 10px;">Update</button>
+</form>

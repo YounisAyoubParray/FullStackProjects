@@ -1,0 +1,21 @@
+<%- include("partials/header.ejs") %>
+
+<form action="/usubmit" method="post">
+<label for="updinp">Enter the blog number you want to update:</label>
+<input 
+  type="number"
+  name="updinp"
+  rows="1"
+  cols="70"
+  placeholder="Number"
+  required>
+</input>
+
+
+  <button class="btn btn-primary" type="usubmit" style="margin: 10px;">Find</button>
+</form>
+
+<% if(locals.uresult){%>
+
+<h3 >  <%= uresult %> </h3>
+<%} %>

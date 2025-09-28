@@ -1,0 +1,22 @@
+<%- include("partials/header.ejs") %>
+<form action="/dsubmit" method="post">
+<label for="deleteinp">Blog you want to delete:</label>
+<input 
+  type="number"
+  name="deleteinp"
+  rows="1"
+  cols="70"
+  placeholder="Number"
+  required>
+</input>
+
+
+  <button class="btn btn-primary" type="dsubmit" style="margin: 10px;">Delete</button>
+</form>
+<h3 style="margin: 10px;">  
+
+<% if(locals.dresult){%>
+
+<h3 >  <%= dresult %> </h3>
+<%} %>
+

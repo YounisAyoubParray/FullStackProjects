@@ -1,0 +1,32 @@
+<%- include("partials/header.ejs") %>
+
+<form action="/wsubmit" method="post">
+<textarea 
+  name="blogdescription"
+  rows="10"
+  cols="50"
+  style="width:100%; height:300px; resize:vertical; padding:8px; vertical-align:top; line-height:1.4;"
+  placeholder="Write your blog here:"
+  required>
+</textarea>
+
+
+  <button class="btn btn-primary" type="wsubmit" style="margin: 10px;">Write</button>
+</form>
+
+<% if(locals.result){%>
+
+<h3>  <%= result %> </h3>
+<%}else{ %>
+<h3>Lets write something </h3>
+<% } %>
+
+
+
+
+
+
+
+
+
+<%- include("partials/footer.ejs") %>
