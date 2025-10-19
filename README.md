@@ -1,1 +1,1 @@
-# Projects I have done while learning Full stack development
+# Capstone Projects I have done while learning Full stack development.
