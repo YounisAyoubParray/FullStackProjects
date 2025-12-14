@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Notes</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="newb">
+    <div class="rock"><h1>Younis Ayoub Parray</h1></div>
+
+
+
+    <div class="newpage">
+<form class="brand" action="/newposthere" method="POST">
+
+  <label for="title"><h2><span style="color: white; padding: 0%;">Title:</span></h2></label>
+  <input id="title" name="title" type="text" placeholder="Title" required>
+
+  <label for="number"><h2><span style="color: white;padding: 0%; ">Rating:</span></h2></label>
+  <input id="number" name="rating" type="number" min="0" max="10" placeholder="0–10" required>
+
+  <label for="content"><h2><span style="color: white;padding: 0%; ">Comment:</span></h2></label>
+  <textarea id="content" name="content" rows="8" placeholder="Write your blog..." required></textarea>
+
+  <button class="addbtn" type="submit">Add</button>
+
+</form>
+</div>
+
+
+
+
+
+<footer>Copyright © <%= new Date().getFullYear() %></footer>
+</body>
+</html>

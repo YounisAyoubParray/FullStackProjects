@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Notes</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="newb">
+    <div class="rock"><h1>Younis Ayoub Parray</h1></div>
+
+
+<% if(ab){%>
+    <div class="edtpage">
+<form class="brand" action="/editpost" method="POST">
+  <input type="hidden" name="idd" value="<%= ab[0].id %>">
+  <label for="title"><h2><span style="color: white; padding: 0%;">Title:</span></h2></label>
+  <input id="title" name="titlee" type="text" value="<%= ab[0].title %>" required>
+
+  <label for="number"><h2><span style="color: white;padding: 0%; ">Rating:</span></h2></label>
+  <input id="number" name="ratinge" type="number" min="0" max="10" value="<%= ab[0].rating %>" required>
+
+  <label for="content"><h2><span style="color: white;padding: 0%; ">Comment:</span></h2></label>
+  <textarea id="content" name="contente" rows="8"  required><%= ab[0].dataa %></textarea>
+
+  <button class="editbtn" type="submit">Edit</button>
+<% } %>
+</form>
+</div>
+
+
+
+
+
+<footer>Copyright © <%= new Date().getFullYear() %></footer>
+</body>
+</html>

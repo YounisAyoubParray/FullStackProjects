@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Notes</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="rock"><h1>Younis Ayoub Parray</h1></div>
+    <div class="detail"><h3>Books I’ve read
+Tiny summary but detailed notes for each. This page will constantly update as I read more, so bookmark it if you want to check back in a few months.
+    Sorted with my top recommendations up top.</h3></div>
+
+
+    <div >
+<form class="addnew" action="/addnew" method="POST">
+    <input type="password" name="pass" placeholder="Password" required style="max-width: fit-content;">
+  <button type="submit">Add More</button>
+</form></div>
+
+<div class="sort">
+<h2>Sort By: </h2> 
+<form action="/sort" method="POST">
+  <button name="by" value="name">Title</button>
+  <button name="by" value="datee">Newest</button>
+  <button name="by" value="rating">Best</button>
+</form></div>
+
+<% if(dataa){%>
+  <% dataa.forEach(element => {%>
+    
+ 
+<div class="blogs">
+  <div class="title"> <h2>Title: <span style="color: rgb(104, 21, 115);"><%= element.title %></span></h2>
+  </div>
+  <div class="date"><h3>Dated: <span style="color:  rgb(104, 21, 115);"><%= element.datee %></span></h3>
+  </div>
+  <div class="rating"><h3>Rating: <span style="color:  rgb(104, 21, 115);"><%= element.rating %></span>/10</h3>
+  </div>
+  <div class="editbtn"style="color:  rgb(104, 21, 115);">
+    <form class="addnew" action="/editing" method="POST">
+    <input type="password" name="passwd" placeholder="Password" required style="max-width: fit-content;">
+  <button name="value" value="<%= element.id %>" type="submit" class="editthing">Edit</button>
+</form>
+    
+  </div>
+  <div class="bodyetc"><h4> <span style="color: rgb(247, 251, 251);"><%= element.dataa %></span> </h4></div>
+
+</div>
+<% }); %>
+<% } %>
+
+
+
+<footer>Copyright © <%= new Date().getFullYear() %></footer>
+
+
+
+
+
+
+</body>
+</html>
