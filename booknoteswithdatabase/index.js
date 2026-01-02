@@ -8,7 +8,7 @@ const db=new pg.Client({
     user:"postgres",
     host:"localhost",
     database:"booksreadproj",
-    password:"**********",
+    password:"*********",
     port:5432
 });
 app.use(bodyParser.urlencoded({extended:true}));
